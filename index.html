@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pestañas Jquery</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h1>Pestañas con Jquery</h1>
+    <br /><br /><br />
+    <ul class="menutabs ancho">
+      <li><a href="#Op1" id="btn1" class="link">Opción 1</a></li>
+      <li><a href="#Op2" class="link">Opción 2</a></li>
+      <li><a href="#Op3" class="link">Opción 3</a></li>
+    </ul>
+
+    <section id="contenedor_tabs" class="ancho">
+      <article id="Op1">
+        <h2>Título 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          laudantium ea dolorem est ipsum temporibus eum ad. Vel itaque tempore
+          maiores facilis neque, consequuntur qui illo! Nemo voluptates quis
+          quia.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et excepturi
+          repudiandae cum adipisci dicta fuga quo esse soluta rerum,
+          consectetur, aspernatur quas corporis tempore accusamus iste quia
+          cupiditate maxime harum?
+        </p>
+      </article>
+      <article id="Op2">
+        <h2>Título 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          laudantium ea dolorem est ipsum temporibus eum ad. Vel itaque tempore
+          maiores facilis neque, consequuntur qui illo! Nemo voluptates quis
+          quia.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, excepturi
+          deleniti beatae ratione quae reprehenderit laudantium iusto accusamus,
+          atque perferendis voluptates sapiente eveniet natus dignissimos
+          reiciendis ad! Harum, repellat natus.
+        </p>
+      </article>
+      <article id="Op3">
+        <h2>Título 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          laudantium ea dolorem est ipsum temporibus eum ad. Vel itaque tempore
+          maiores facilis neque, consequuntur qui illo! Nemo voluptates quis
+          quia.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+          laboriosam quaerat officiis dolorum, sapiente officia? Eum, possimus
+          natus numquam maiores voluptas alias delectus a veniam fugiat quae
+          tempore, deleniti id!
+        </p>
+      </article>
+    </section>
+
+    <!-- Tabs JS -->
+
+    <script>
+      $("#btn1").addClass("activo");
+      $("#contenedor_tabs article").hide();
+      $("#Op1").show();
+
+      $(".link").click(function name() {
+        $(".link").removeClass("activo");
+        $(this).addClass("activo");
+        $("#contenedor_tabs article").hide();
+
+        var activar_tab = $(this).attr("href");
+        $(activar_tab).show();
+      });
+    </script>
+  </body>
+</html>
